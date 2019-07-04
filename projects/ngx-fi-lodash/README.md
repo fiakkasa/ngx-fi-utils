@@ -2,6 +2,12 @@
 
 [lodash](https://lodash.com/) as ngx-fi-lodash
 
+## Installation
+
+- `npm i lodash --save`
+- `npm i @types/lodash --save-dev`
+- `npm i ngx-fi-lodash --save`
+
 ## How to use
 
 ### In a module
