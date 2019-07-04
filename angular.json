@@ -3,36 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-lodash": {
+    "ngx-fi-lodash": {
       "projectType": "library",
-      "root": "projects/ngx-lodash",
-      "sourceRoot": "projects/ngx-lodash/src",
+      "root": "projects/ngx-fi-lodash",
+      "sourceRoot": "projects/ngx-fi-lodash/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-lodash/tsconfig.lib.json",
-            "project": "projects/ngx-lodash/ng-package.json"
+            "tsConfig": "projects/ngx-fi-lodash/tsconfig.lib.json",
+            "project": "projects/ngx-fi-lodash/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-lodash/src/test.ts",
-            "tsConfig": "projects/ngx-lodash/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-lodash/karma.conf.js"
+            "main": "projects/ngx-fi-lodash/src/test.ts",
+            "tsConfig": "projects/ngx-fi-lodash/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-fi-lodash/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["projects/ngx-lodash/tsconfig.lib.json", "projects/ngx-lodash/tsconfig.spec.json"],
+            "tsConfig": ["projects/ngx-fi-lodash/tsconfig.lib.json", "projects/ngx-fi-lodash/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-lodash"
+  "defaultProject": "ngx-fi-lodash"
 }

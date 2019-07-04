@@ -14,7 +14,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "generate-ngx-lodash": "ng build ngx-lodash && cd ./dist/ngx-lodash && npm pack && move ngx-lodash-*.tgz ../../packages/ngx-lodash"
+    "generate-ngx-fi-lodash": "ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-lodash-*.tgz ../../packages/ngx-fi-lodash"
   },
   "private": true,
   "dependencies": {

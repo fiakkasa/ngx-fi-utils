@@ -1,5 +1,5 @@
 {
-  "name": "ngx-lodash",
+  "name": "ngx-fi-lodash",
   "version": "0.0.1",
   "description": "lodash for ngx projects",
   "peerDependencies": {

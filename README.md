@@ -4,13 +4,13 @@
 
 Various utilities and wrappers for ngx projects
 
-- [lodash](https://lodash.com/) as ngx-lodash
+- [lodash](https://lodash.com/) as ngx-fi-lodash
 
 ## Generate Commands
 
 **Target Windows 10 with powershell**
 
-- lodash: `npm run generate-ngx-lodash`
+- lodash: `npm run generate-ngx-fi-lodash`
 
 ## Credits
 

@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-lodash": [
-        "dist/ngx-lodash"
+      "ngx-fi-lodash": [
+        "dist/ngx-fi-lodash"
       ],
-      "ngx-lodash/*": [
-        "dist/ngx-lodash/*"
+      "ngx-fi-lodash/*": [
+        "dist/ngx-fi-lodash/*"
       ]
     }
   },

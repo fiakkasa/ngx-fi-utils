@@ -1,6 +1,6 @@
-# NgxLodash
+# NgxFiLodash
 
-[lodash](https://lodash.com/) as ngx-lodash
+[lodash](https://lodash.com/) as ngx-fi-lodash
 
 ## How to use
 
@@ -8,11 +8,11 @@
 
 ```typescript
 import { NgModule } from "@angular/core";
-import { NgxLodashModule } from "ngx-lodash";
+import { NgxFiLodashModule } from "ngx-fi-lodash";
 
 @NgModule({
-  imports: [NgxLodashModule], // for consumption within the scope of the module
-  exports: [NgxLodashModule] // if propagation is required
+  imports: [NgxFiLodashModule], // for consumption within the scope of the module
+  exports: [NgxFiLodashModule] // if propagation is required
 })
 export class SomeModule {}
 ```
@@ -22,7 +22,7 @@ export class SomeModule {}
 ```typescript
 import { Inject } from "@angular/core";
 import { LoDashStatic } from "lodash";
-import { LODASH_TOKEN } from "ngx-lodash";
+import { LODASH_TOKEN } from "ngx-fi-lodash";
 
 export class SomeClass {
   constructor(@Inject(LODASH_TOKEN) private _: LoDashStatic) {}
@@ -32,15 +32,15 @@ export class SomeClass {
 ### For testing
 
 ```typescript
-import { NgxLodashModule } from 'ngx-lodash';
+import { NgxFiLodashModule } from 'ngx-fi-lodash';
 import { LoDashStatic } from "lodash";
-import { LODASH_TOKEN } from "ngx-lodash";
+import { LODASH_TOKEN } from "ngx-fi-lodash";
 
 describe('TestingTitle', () => {
   let _: LoDashStatic;
   beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [NgxLodashModule]
+        imports: [NgxFiLodashModule]
       });
 
       _ = TestBed.get(LODASH_TOKEN);

@@ -7,4 +7,4 @@ export const LODASH_TOKEN = new InjectionToken<LoDashStatic>('_');
 @NgModule({
   providers: [{ provide: LODASH_TOKEN, useValue: _ }]
 })
-export class NgxLodashModule {}
+export class NgxFiLodashModule {}
