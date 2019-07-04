@@ -1,7 +1,15 @@
 {
   "name": "ngx-fi-lodash",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "lodash for ngx projects",
+  "keywords": [
+    "lodash",
+    "angular"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
+  },
   "peerDependencies": {
     "@angular/common": "^8.1.0",
     "@angular/core": "^8.1.0",
