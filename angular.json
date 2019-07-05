@@ -67,6 +67,41 @@
           }
         }
       }
+    },
+    "ngx-fi-validator": {
+      "projectType": "library",
+      "root": "projects/ngx-fi-validator",
+      "sourceRoot": "projects/ngx-fi-validator/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-fi-validator/tsconfig.lib.json",
+            "project": "projects/ngx-fi-validator/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-fi-validator/src/test.ts",
+            "tsConfig": "projects/ngx-fi-validator/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-fi-validator/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-fi-validator/tsconfig.lib.json",
+              "projects/ngx-fi-validator/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-fi-lodash"

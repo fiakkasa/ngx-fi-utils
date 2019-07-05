@@ -29,7 +29,7 @@ import { Inject } from "@angular/core";
 import { MomentDefinition, MOMENT_TOKEN } from "ngx-fi-moment";
 
 export class SomeClass {
-  constructor(@Inject(MOMENT_TOKEN) private _: MomentDefinition) {}
+  constructor(@Inject(MOMENT_TOKEN) private moment: MomentDefinition) {}
 }
 ```
 
@@ -40,13 +40,13 @@ import { NgxFiMomentModule } from 'ngx-fi-moment';
 import { MomentDefinition, MOMENT_TOKEN } from 'ngx-fi-moment';
 
 describe('TestingTitle', () => {
-  let _: LoDashStatic;
+  let moment: MomentDefinition;
   beforeEach(async(() => {
       TestBed.configureTestingModule({
         imports: [NgxFiMomentModule]
       });
 
-      _ = TestBed.get(MOMENT_TOKEN);
+      moment = TestBed.get(MOMENT_TOKEN);
     }));
   }));
 }));

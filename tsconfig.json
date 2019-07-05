@@ -30,6 +30,12 @@
       ],
       "ngx-fi-moment/*": [
         "dist/ngx-fi-moment/*"
+      ],
+      "ngx-fi-validator": [
+        "dist/ngx-fi-validator"
+      ],
+      "ngx-fi-validator/*": [
+        "dist/ngx-fi-validator/*"
       ]
     }
   },

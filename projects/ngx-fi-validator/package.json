@@ -1,9 +1,9 @@
 {
-  "name": "ngx-fi-moment",
-  "version": "0.0.3",
-  "description": "moment for ngx projects",
+  "name": "ngx-fi-validator",
+  "version": "0.0.1",
+  "description": "json validator for ngx projects",
   "keywords": [
-    "moment",
+    "json validator",
     "angular"
   ],
   "repository": {
@@ -13,6 +13,6 @@
   "peerDependencies": {
     "@angular/common": "^8.1.0",
     "@angular/core": "^8.1.0",
-    "moment": "^2.24.0"
+    "ajv": "^6.10.0"
   }
 }
