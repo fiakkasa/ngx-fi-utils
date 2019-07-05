@@ -15,6 +15,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "generate-all": "npm run generate-ngx-fi-lodash && npm run generate-ngx-fi-moment && npm run generate-ngx-fi-validator",
     "generate-ngx-fi-lodash": "ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-lodash-*.tgz ../../packages/ngx-fi-lodash",
     "generate-ngx-fi-moment": "ng build ngx-fi-moment && cd ./dist/ngx-fi-moment && npm pack && move ngx-fi-moment-*.tgz ../../packages/ngx-fi-moment",
     "generate-ngx-fi-validator": "ng build ngx-fi-validator && cd ./dist/ngx-fi-validator && npm pack && move ngx-fi-validator-*.tgz ../../packages/ngx-fi-validator"

@@ -12,6 +12,7 @@ Various utilities and wrappers for ngx projects
 
 **Target: Windows 10 with powershell**
 
+- all: `npm run generate-all`
 - lodash: `npm run generate-ngx-fi-lodash`
 - moment: `npm run generate-ngx-fi-moment`
 - validator: `npm run generate-ngx-fi-validator`
