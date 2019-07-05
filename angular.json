@@ -32,6 +32,41 @@
           }
         }
       }
+    },
+    "ngx-fi-moment": {
+      "projectType": "library",
+      "root": "projects/ngx-fi-moment",
+      "sourceRoot": "projects/ngx-fi-moment/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-fi-moment/tsconfig.lib.json",
+            "project": "projects/ngx-fi-moment/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-fi-moment/src/test.ts",
+            "tsConfig": "projects/ngx-fi-moment/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-fi-moment/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-fi-moment/tsconfig.lib.json",
+              "projects/ngx-fi-moment/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-fi-lodash"

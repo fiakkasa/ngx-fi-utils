@@ -24,6 +24,12 @@
       ],
       "ngx-fi-lodash/*": [
         "dist/ngx-fi-lodash/*"
+      ],
+      "ngx-fi-moment": [
+        "dist/ngx-fi-moment"
+      ],
+      "ngx-fi-moment/*": [
+        "dist/ngx-fi-moment/*"
       ]
     }
   },

@@ -14,7 +14,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "generate-ngx-fi-lodash": "ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-lodash-*.tgz ../../packages/ngx-fi-lodash"
+    "generate-ngx-fi-lodash": "ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-lodash-*.tgz ../../packages/ngx-fi-lodash",
+    "generate-ngx-fi-moment": "ng build ngx-fi-moment && cd ./dist/ngx-fi-moment && npm pack && move ngx-fi-moment-*.tgz ../../packages/ngx-fi-moment"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/router": "~8.1.0",
     "lodash": "^4.17.11",
+    "moment": "^2.24.0",
     "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

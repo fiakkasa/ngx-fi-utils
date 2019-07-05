@@ -1,0 +1,18 @@
+{
+  "name": "ngx-fi-moment",
+  "version": "0.0.1",
+  "description": "lodash for ngx projects",
+  "keywords": [
+    "moment",
+    "angular"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.1.0",
+    "@angular/core": "^8.1.0",
+    "moment": "^2.24.0"
+  }
+}
