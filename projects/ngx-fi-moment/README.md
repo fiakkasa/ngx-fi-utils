@@ -26,7 +26,7 @@ export class SomeModule {}
 
 ```typescript
 import { Inject } from "@angular/core";
-import { MOMENT_TOKEN, MomentDefinition } from "ngx-fi-moment";
+import { MomentDefinition, MOMENT_TOKEN } from "ngx-fi-moment";
 
 export class SomeClass {
   constructor(@Inject(MOMENT_TOKEN) private _: MomentDefinition) {}
@@ -37,7 +37,7 @@ export class SomeClass {
 
 ```typescript
 import { NgxFiMomentModule } from 'ngx-fi-moment';
-import { MOMENT_TOKEN, MomentDefinition } from "ngx-fi-moment";
+import { MomentDefinition, MOMENT_TOKEN } from 'ngx-fi-moment';
 
 describe('TestingTitle', () => {
   let _: LoDashStatic;

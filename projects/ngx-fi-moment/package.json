@@ -1,7 +1,7 @@
 {
   "name": "ngx-fi-moment",
-  "version": "0.0.1",
-  "description": "lodash for ngx projects",
+  "version": "0.0.2",
+  "description": "moment for ngx projects",
   "keywords": [
     "moment",
     "angular"
