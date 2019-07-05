@@ -36,8 +36,8 @@ export class SomeClass {
 ### For testing
 
 ```typescript
-import { NgxFiValidatorModule } from 'ngx-fi-validator';
-import { ValidatorDefinition, VALIDATOR_TOKEN } from 'ngx-fi-validator';
+import { NgxFiValidatorModule } from "ngx-fi-validator";
+import { ValidatorDefinition, VALIDATOR_TOKEN } from "ngx-fi-validator";
 
 describe('TestingTitle', () => {
   let validator: ValidatorDefinition;

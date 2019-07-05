@@ -36,8 +36,8 @@ export class SomeClass {
 ### For testing
 
 ```typescript
-import { NgxFiMomentModule } from 'ngx-fi-moment';
-import { MomentDefinition, MOMENT_TOKEN } from 'ngx-fi-moment';
+import { NgxFiMomentModule } from "ngx-fi-moment";
+import { MomentDefinition, MOMENT_TOKEN } from "ngx-fi-moment";
 
 describe('TestingTitle', () => {
   let moment: MomentDefinition;

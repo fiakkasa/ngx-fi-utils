@@ -38,9 +38,8 @@ export class SomeClass {
 ### For testing
 
 ```typescript
-import { NgxFiLodashModule } from 'ngx-fi-lodash';
 import { LoDashStatic } from "lodash";
-import { LODASH_TOKEN } from "ngx-fi-lodash";
+import { LODASH_TOKEN, NgxFiLodashModule } from "ngx-fi-lodash";
 
 describe('TestingTitle', () => {
   let _: LoDashStatic;

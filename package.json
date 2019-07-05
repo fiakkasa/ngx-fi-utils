@@ -1,12 +1,13 @@
 {
   "name": "ngx-fi-utils",
+  "license": "MIT",
   "description": "Various utilities and wrappers for angular projects",
   "author": {
     "name": "Adamos Fiakkas",
     "email": "fiakkasa@live.com",
     "url": "https://fiakkas.net"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

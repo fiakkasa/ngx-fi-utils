@@ -1,6 +1,7 @@
 {
   "name": "ngx-fi-moment",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "license": "MIT",
   "description": "moment for ngx projects",
   "keywords": [
     "moment",
