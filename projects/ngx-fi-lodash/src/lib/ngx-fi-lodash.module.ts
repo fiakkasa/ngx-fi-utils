@@ -4,7 +4,11 @@ import { LoDashStatic } from 'lodash';
 
 export const LODASH_TOKEN = new InjectionToken<LoDashStatic>('_');
 
+export function factory() {
+  return _;
+}
+
 @NgModule({
-  providers: [{ provide: LODASH_TOKEN, useValue: _ }]
+  providers: [{ provide: LODASH_TOKEN, useFactory: factory }]
 })
 export class NgxFiLodashModule {}
