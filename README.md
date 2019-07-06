@@ -8,7 +8,7 @@ Various utilities and wrappers for ngx projects
 - [moment](https://momentjs.com/) as ngx-fi-moment
 - [json validator](https://ajv.js.org/) as ngx-fi-validator
 - ngx-fi-online (navigator.onLine wrapper)
-- [ngx-fi-fuse](https://fusejs.io/)
+- [fuse](https://fusejs.io/) as ngx-fi-fuse
 
 ## Lint Commands
 
