@@ -20,8 +20,7 @@ submitting an issue to our [GitHub Repository][github].
 
 ## <a name="feature"></a> Missing a Feature?
 
-You can request a new feature by, you can help by
-submitting an issue to our [GitHub Repository][github].
+You can request a new feature by submitting an issue to our [GitHub Repository][github].
 
 ## <a name="coding"></a> Coding Rules
 
