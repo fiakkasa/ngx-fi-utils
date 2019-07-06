@@ -102,6 +102,41 @@
           }
         }
       }
+    },
+    "ngx-fi-online": {
+      "projectType": "library",
+      "root": "projects/ngx-fi-online",
+      "sourceRoot": "projects/ngx-fi-online/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-fi-online/tsconfig.lib.json",
+            "project": "projects/ngx-fi-online/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-fi-online/src/test.ts",
+            "tsConfig": "projects/ngx-fi-online/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-fi-online/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-fi-online/tsconfig.lib.json",
+              "projects/ngx-fi-online/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-fi-lodash"

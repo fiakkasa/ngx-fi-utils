@@ -1,0 +1,21 @@
+{
+  "name": "ngx-fi-online",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "navigator.onLine wrapper for ngx projects",
+  "keywords": [
+    "navigator.onLine wrapper",
+    "angular"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.1.0",
+    "@angular/core": "^8.1.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^1.18.1"
+  }
+}

@@ -36,6 +36,12 @@
       ],
       "ngx-fi-validator/*": [
         "dist/ngx-fi-validator/*"
+      ],
+      "ngx-fi-online": [
+        "dist/ngx-fi-online"
+      ],
+      "ngx-fi-online/*": [
+        "dist/ngx-fi-online/*"
       ]
     }
   },

@@ -7,7 +7,7 @@
     "email": "fiakkasa@live.com",
     "url": "https://fiakkas.net"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,10 +15,15 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "generate-all": "npm run generate-ngx-fi-lodash && npm run generate-ngx-fi-moment && npm run generate-ngx-fi-validator",
+    "lint-all": "npm run lint-ngx-fi-online",
+    "lint-ngx-fi-online": "ng l ngx-fi-online",
+    "test-all": "npm run test-ngx-fi-online",
+    "test-ngx-fi-online": "ng test ngx-fi-online --code-coverage --browsers ChromeHeadless --watch false",
+    "generate-all": "npm run generate-ngx-fi-lodash && npm run generate-ngx-fi-moment && npm run generate-ngx-fi-validator && npm run generate-ngx-fi-online",
     "generate-ngx-fi-lodash": "ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-lodash-*.tgz ../../packages/ngx-fi-lodash",
     "generate-ngx-fi-moment": "ng build ngx-fi-moment && cd ./dist/ngx-fi-moment && npm pack && move ngx-fi-moment-*.tgz ../../packages/ngx-fi-moment",
-    "generate-ngx-fi-validator": "ng build ngx-fi-validator && cd ./dist/ngx-fi-validator && npm pack && move ngx-fi-validator-*.tgz ../../packages/ngx-fi-validator"
+    "generate-ngx-fi-validator": "ng build ngx-fi-validator && cd ./dist/ngx-fi-validator && npm pack && move ngx-fi-validator-*.tgz ../../packages/ngx-fi-validator",
+    "generate-ngx-fi-online": "npm run lint-ngx-fi-online && npm run test-ngx-fi-online && ng build ngx-fi-online && cd ./dist/ngx-fi-online && npm pack && move ngx-fi-online-*.tgz ../../packages/ngx-fi-online"
   },
   "private": true,
   "dependencies": {
@@ -57,6 +62,7 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "ng-packagr": "^5.3.0",
     "protractor": "~5.4.2",
+    "puppeteer": "^1.18.1",
     "ts-node": "~8.3.0",
     "tsickle": "^0.35.0",
     "tslint": "~5.18.0",
