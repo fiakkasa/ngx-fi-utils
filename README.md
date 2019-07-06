@@ -8,11 +8,16 @@ Various utilities and wrappers for ngx projects
 - [moment](https://momentjs.com/) as ngx-fi-moment
 - [json validator](https://ajv.js.org/) as ngx-fi-validator
 - ngx-fi-online (navigator.onLine wrapper)
+- [ngx-fi-fuse](https://fusejs.io/)
 
 ## Lint Commands
 
 - all: `npm run lint-all`
+- ngx-fi-lodash: `npm run lint-ngx-fi-lodash`
+- ngx-fi-moment: `npm run lint-ngx-fi-moment`
+- ngx-fi-validator: `npm run lint-ngx-fi-validator`
 - ngx-fi-online: `npm run lint-ngx-fi-online`
+- ngx-fi-fuse: `npm run lint-ngx-fi-fuse`
 
 ## Test Commands
 
@@ -28,6 +33,7 @@ Various utilities and wrappers for ngx projects
 - ngx-fi-moment: `npm run generate-ngx-fi-moment`
 - ngx-fi-validator: `npm run generate-ngx-fi-validator`
 - ngx-fi-online: `npm run generate-ngx-fi-online`
+- ngx-fi-fuse: `npm run generate-ngx-fi-fuse`
 
 ## Credits
 

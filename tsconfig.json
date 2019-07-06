@@ -42,6 +42,12 @@
       ],
       "ngx-fi-online/*": [
         "dist/ngx-fi-online/*"
+      ],
+      "ngx-fi-fuse": [
+        "dist/ngx-fi-fuse"
+      ],
+      "ngx-fi-fuse/*": [
+        "dist/ngx-fi-fuse/*"
       ]
     }
   },

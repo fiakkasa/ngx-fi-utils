@@ -7,7 +7,7 @@
     "email": "fiakkasa@live.com",
     "url": "https://fiakkas.net"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,15 +15,20 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lint-all": "npm run lint-ngx-fi-online",
+    "lint-all": "ng l ngx-fi-lodash && ng l ngx-fi-moment && ng l ngx-fi-validator && npm run lint-ngx-fi-online && npm run ng l ngx-fi-fuse",
+    "lint-ngx-fi-lodash": "ng l ngx-fi-lodash",
+    "lint-ngx-fi-moment": "ng l ngx-fi-moment",
+    "lint-ngx-fi-validator": "ng l ngx-fi-validator",
     "lint-ngx-fi-online": "ng l ngx-fi-online",
+    "lint-ngx-fi-fuse": "ng l ngx-fi-fuse",
     "test-all": "npm run test-ngx-fi-online",
     "test-ngx-fi-online": "ng test ngx-fi-online --code-coverage --browsers ChromeHeadless --watch false",
-    "generate-all": "npm run generate-ngx-fi-lodash && npm run generate-ngx-fi-moment && npm run generate-ngx-fi-validator && npm run generate-ngx-fi-online",
-    "generate-ngx-fi-lodash": "ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-lodash-*.tgz ../../packages/ngx-fi-lodash",
-    "generate-ngx-fi-moment": "ng build ngx-fi-moment && cd ./dist/ngx-fi-moment && npm pack && move ngx-fi-moment-*.tgz ../../packages/ngx-fi-moment",
-    "generate-ngx-fi-validator": "ng build ngx-fi-validator && cd ./dist/ngx-fi-validator && npm pack && move ngx-fi-validator-*.tgz ../../packages/ngx-fi-validator",
-    "generate-ngx-fi-online": "npm run lint-ngx-fi-online && npm run test-ngx-fi-online && ng build ngx-fi-online && cd ./dist/ngx-fi-online && npm pack && move ngx-fi-online-*.tgz ../../packages/ngx-fi-online"
+    "generate-all": "npm run generate-ngx-fi-lodash && npm run generate-ngx-fi-moment && npm run generate-ngx-fi-validator && npm run generate-ngx-fi-online && npm run generate-ngx-fi-fuse",
+    "generate-ngx-fi-lodash": "npm run lint-ngx-fi-lodash && ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-lodash-*.tgz ../../packages/ngx-fi-lodash",
+    "generate-ngx-fi-moment": "npm run lint-ngx-fi-moment && ng build ngx-fi-moment && cd ./dist/ngx-fi-moment && npm pack && move ngx-fi-moment-*.tgz ../../packages/ngx-fi-moment",
+    "generate-ngx-fi-validator": "npm run lint-ngx-fi-validator && ng build ngx-fi-validator && cd ./dist/ngx-fi-validator && npm pack && move ngx-fi-validator-*.tgz ../../packages/ngx-fi-validator",
+    "generate-ngx-fi-online": "npm run lint-ngx-fi-online && npm run test-ngx-fi-online && ng build ngx-fi-online && cd ./dist/ngx-fi-online && npm pack && move ngx-fi-online-*.tgz ../../packages/ngx-fi-online",
+    "generate-ngx-fi-fuse": "npm run lint-ngx-fi-fuse && ng build ngx-fi-fuse && cd ./dist/ngx-fi-fuse && npm pack && move ngx-fi-fuse-*.tgz ../../packages/ngx-fi-fuse"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +41,7 @@
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/router": "~8.1.0",
     "ajv": "^6.10.0",
+    "fuse.js": "^3.4.5",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "rxjs": "~6.5.2",
