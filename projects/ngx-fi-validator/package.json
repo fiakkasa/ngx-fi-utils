@@ -1,6 +1,6 @@
 {
   "name": "ngx-fi-validator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "description": "json validator for ngx projects",
   "keywords": [
@@ -12,8 +12,8 @@
     "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
   },
   "peerDependencies": {
-    "@angular/common": "^8.1.0",
-    "@angular/core": "^8.1.0",
+    "@angular/common": "^8.1.1",
+    "@angular/core": "^8.1.1",
     "ajv": "^6.10.1"
   }
 }
