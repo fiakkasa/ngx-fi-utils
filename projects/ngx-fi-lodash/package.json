@@ -1,6 +1,6 @@
 {
   "name": "ngx-fi-lodash",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "description": "lodash for ngx projects",
   "keywords": [
@@ -14,9 +14,9 @@
   "peerDependencies": {
     "@angular/common": "^8.1.0",
     "@angular/core": "^8.1.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.14"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.135"
+    "@types/lodash": "^4.14.136"
   }
 }
