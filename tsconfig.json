@@ -11,44 +11,20 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "noUnusedLocals": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "ngx-fi-lodash": [
-        "dist/ngx-fi-lodash"
-      ],
-      "ngx-fi-lodash/*": [
-        "dist/ngx-fi-lodash/*"
-      ],
-      "ngx-fi-moment": [
-        "dist/ngx-fi-moment"
-      ],
-      "ngx-fi-moment/*": [
-        "dist/ngx-fi-moment/*"
-      ],
-      "ngx-fi-validator": [
-        "dist/ngx-fi-validator"
-      ],
-      "ngx-fi-validator/*": [
-        "dist/ngx-fi-validator/*"
-      ],
-      "ngx-fi-online": [
-        "dist/ngx-fi-online"
-      ],
-      "ngx-fi-online/*": [
-        "dist/ngx-fi-online/*"
-      ],
-      "ngx-fi-fuse": [
-        "dist/ngx-fi-fuse"
-      ],
-      "ngx-fi-fuse/*": [
-        "dist/ngx-fi-fuse/*"
-      ]
+      "ngx-fi-lodash": ["dist/ngx-fi-lodash"],
+      "ngx-fi-lodash/*": ["dist/ngx-fi-lodash/*"],
+      "ngx-fi-moment": ["dist/ngx-fi-moment"],
+      "ngx-fi-moment/*": ["dist/ngx-fi-moment/*"],
+      "ngx-fi-validator": ["dist/ngx-fi-validator"],
+      "ngx-fi-validator/*": ["dist/ngx-fi-validator/*"],
+      "ngx-fi-online": ["dist/ngx-fi-online"],
+      "ngx-fi-online/*": ["dist/ngx-fi-online/*"],
+      "ngx-fi-fuse": ["dist/ngx-fi-fuse"],
+      "ngx-fi-fuse/*": ["dist/ngx-fi-fuse/*"]
     }
   },
   "angularCompilerOptions": {

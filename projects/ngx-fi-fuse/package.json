@@ -1,6 +1,6 @@
 {
   "name": "ngx-fi-fuse",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "fuse for ngx projects",
   "keywords": [
@@ -13,8 +13,8 @@
     "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
   },
   "peerDependencies": {
-    "@angular/common": "^8.1.2",
-    "@angular/core": "^8.1.2",
+    "@angular/common": "^8.2.4",
+    "@angular/core": "^8.2.4",
     "fuse.js": "^3.4.5"
   }
 }
