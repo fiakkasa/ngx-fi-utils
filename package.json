@@ -7,7 +7,7 @@
     "email": "fiakkasa@live.com",
     "url": "https://fiakkas.net"
   },
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -51,7 +51,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.802.2",
     "@angular-devkit/build-ng-packagr": "^0.802.2",
-    "@angular/cli": "^8.3.1",
+    "@angular/cli": "^8.3.2",
     "@angular/compiler-cli": "^8.2.4",
     "@angular/language-service": "^8.2.4",
     "@types/jasmine": "^3.4.0",
