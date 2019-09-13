@@ -1,6 +1,6 @@
 {
-  "name": "ngx-fi-moment",
-  "version": "0.2.0",
+  "name": "@ngx-fi-utils/ngx-fi-moment",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "moment for ngx projects",
   "keywords": [
@@ -12,8 +12,8 @@
     "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
   },
   "peerDependencies": {
-    "@angular/common": "^8.2.4",
-    "@angular/core": "^8.2.4",
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
     "moment": "^2.24.0"
   }
 }
