@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-fi-utils/ngx-fi-fuse",
+  "name": "ngx-fi-fuse",
   "version": "1.0.0",
   "license": "MIT",
   "description": "fuse for ngx projects",

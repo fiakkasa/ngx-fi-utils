@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-fi-utils/ngx-fi-online",
+  "name": "ngx-fi-online",
   "version": "1.0.0",
   "license": "MIT",
   "description": "navigator.onLine wrapper for ngx projects",

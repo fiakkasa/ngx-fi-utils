@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-fi-utils/ngx-fi-moment",
+  "name": "ngx-fi-moment",
   "version": "1.0.0",
   "license": "MIT",
   "description": "moment for ngx projects",

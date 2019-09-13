@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-fi-utils/ngx-fi-lodash",
+  "name": "ngx-fi-lodash",
   "version": "1.0.0",
   "license": "MIT",
   "description": "lodash for ngx projects",

@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-fi-utils/ngx-fi-validator",
+  "name": "ngx-fi-validator",
   "version": "1.0.0",
   "license": "MIT",
   "description": "json schema validator for ngx projects",
