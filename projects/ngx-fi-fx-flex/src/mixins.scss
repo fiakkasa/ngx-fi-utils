@@ -1,3 +1,9 @@
+@mixin fxBoxSizing {
+  [class*="#{$fxPrefix}-"] {
+    box-sizing: border-box;
+  }
+}
+
 @mixin fxStyling($prefixValue) {
   $dash: "";
 
@@ -7,54 +13,66 @@
 
   $prefix: #{$fxPrefix}#{$dash}#{$prefixValue};
 
+  // Layout
   // shorthand for .fx-flex.fx-dir-*
   @each $key, $value in $fxDirectionCollection {
     .#{$prefix}-layout-#{$key} {
       display: flex;
-      box-sizing: border-box;
       flex-direction: #{$value};
     }
   }
 
+  // Fill
+  .#{$prefix}-fill {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  // Display
   @each $key, $value in $fxDisplayCollection {
     .#{$prefix}-#{$key} {
-      @if $value != "none" {
-        box-sizing: border-box;
-      }
       display: #{$value};
     }
   }
 
+  // Dir
   @each $key, $value in $fxDirectionCollection {
     .#{$prefix}-dir-#{$key} {
       flex-direction: #{$value};
     }
   }
 
+  // Wrap
   @each $key, $value in $fxWrapCollection {
     .#{$prefix}-#{$key} {
       flex-wrap: #{$value};
     }
   }
 
+  // Justify Content
   @each $key, $value in $fxJustifyContentCollection {
     .#{$prefix}-justify-content-#{$key} {
       justify-content: #{$value};
     }
   }
 
+  // Items Alignment
   @each $key, $value in $fxItemsAlignmentCollection {
     .#{$prefix}-align-items-#{$key} {
       align-items: #{$value};
     }
   }
 
+  // Self Alignment
   @each $key, $value in $fxSelfAlignmentCollection {
     .#{$prefix}-align-self-#{$key} {
       align-self: #{$value};
     }
   }
 
+  // Item
   .#{$prefix}-item {
     flex: 1 1 auto;
   }
@@ -67,6 +85,7 @@
     flex: 1 0 auto;
   }
 
+  // Grow and Shrink
   @for $i from 0 through $fxGrowAndShrink {
     .#{$prefix}-grow-#{$i} {
       flex-grow: #{$i};
@@ -76,6 +95,7 @@
     }
   }
 
+  // Columns
   @for $i from 1 through $fxNumberOfColumns {
     .#{$prefix}-col-#{$i} {
       width: percentage($i/$fxNumberOfColumns);
@@ -85,6 +105,7 @@
     }
   }
 
+  // Offsets
   $numberOfOffsets: $fxNumberOfColumns - 1;
 
   @for $i from 1 through $numberOfOffsets {
@@ -112,6 +133,8 @@
 }
 
 @mixin flex {
+  @include fxBoxSizing;
+
   @include fxStyling("");
 
   @include fxBreakpoints;

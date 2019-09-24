@@ -1,6 +1,6 @@
 {
   "name": "ngx-fi-fx-flex",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "Responsive flex css framework, inspired by Angular FlexLayout",
   "keywords": [

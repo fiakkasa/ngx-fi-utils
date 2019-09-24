@@ -70,6 +70,7 @@ Feel free to customize as needed per your respective use case
 - `mixins.scss`
 
   - `flex`: produces the entire framework using mixins below
+  - `fxBoxSizing`: produces the generic selector that sets box sizing for every element prefixed using the defined prefix
   - `fxBreakpoints`: uses fxStyling mixin to produce styles based on defined breakpoints
   - `fxStyling($prefixValue)`: produces styling
     - a blank prefix value would result to something like `.fx-dir-row`
