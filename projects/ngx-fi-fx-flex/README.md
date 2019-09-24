@@ -10,25 +10,23 @@ Responsive flex css framework, inspired by Angular FlexLayout
 
 ### Registration
 
-Consider using of the below approaches
+Consider using one of the below approaches
 
-#### angular.json
+- In `angular.json`
 
-Under _styles_ **flex.min.css** or **flex.scss**
+Under _styles_ register **flex.min.css** or **flex.scss**
 
 ```json
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  ...
   "projects": {
     "project-name": {
-      ...
       "architect": {
         "build": {
-          ...
           "options": {
-            ...
             "styles": [
+              "node_modules/ngx-fi-fx-flex/flex.scss"
+               or
               "node_modules/ngx-fi-fx-flex/flex.min.css"
               ...
             ]
@@ -36,38 +34,46 @@ Under _styles_ **flex.min.css** or **flex.scss**
         }
       }
     }
-    ...
   }
 }
 ```
 
-#### styles.scss
+- In `styles.scss`
 
 ```scss
-@import "~ngx-fi-fx-flex/flex.min.scss";
+@import "~ngx-fi-fx-flex/flex.scss";
+or
+@import "~ngx-fi-fx-flex/flex.min.css";
 ```
 
-#### index.html
+- In `index.html`
 
-Expose **flex.min.css** in a public location and register in your index.html
+Expose **flex.min.css** in a public location and add to your index.html
 
 ```html
 <link async rel="stylesheet" href="path_to_styles/flex.min.css" />
 ```
 
+- Using some other mechanism that will load the css / scss file in your solution
+
 ### Customizations
 
-Feel free to customize below vars as needed per your respective use case
+Feel free to customize as needed per your respective use case
 
-The solution consists of the following mixins resing under `mixins.scss`
+- The solution consists of the following
 
-- `flex`: produces the entire framework using below mixins
-- `fxBreakpoints`: uses fxStyling to produce styles based on defined breakpoints
-- `fxStyling($prefixValue)`: produces styling
-  - a blank prefix value would result to something like `fx-dir-row`
-  - a prefix value like **xs** would result to something like `.fx-xs-dir-row`
+  - `flex.scss`: bootstraps the framework
+  - `breakpoints.scss`: responsive breakpoints
+  - `vars.scss`: vars
+  - `mixins.scss`: mixins
 
-And the following vars:
+- `mixins.scss`
+
+  - `flex`: produces the entire framework using mixins below
+  - `fxBreakpoints`: uses fxStyling mixin to produce styles based on defined breakpoints
+  - `fxStyling($prefixValue)`: produces styling
+    - a blank prefix value would result to something like `.fx-dir-row`
+    - a prefix value like **xs** would result to something like `.fx-xs-dir-row`
 
 - `breakpoints.scss`
 
