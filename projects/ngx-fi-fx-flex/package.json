@@ -1,0 +1,17 @@
+{
+  "name": "ngx-fi-fx-flex",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Responsive flex css framework, inspired by Angular FlexLayout",
+  "keywords": [
+    "Angular FlexLayout",
+    "flex",
+    "framework",
+    "css",
+    "scss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
+  }
+}

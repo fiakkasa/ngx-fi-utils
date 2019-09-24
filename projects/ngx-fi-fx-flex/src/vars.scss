@@ -1,0 +1,34 @@
+$fxNumberOfColumns: 12 !default;
+$fxGrowAndShrink: 12 !default;
+$fxDisplayCollection: (("flex", "flex"), ("inline-flex", "inline-flex")) !default;
+$fxDirectionCollection: (
+  ("row", "row"),
+  ("row-reverse", "row-reverse"),
+  ("column", "column"),
+  ("column-reverse", "column-reverse")
+) !default;
+$fxWrapCollection: (("wrap", "wrap"), ("nowrap", "nowrap"), ("wrap-reverse", "wrap-reverse")) !default;
+$fxJustifyContentCollection: (
+  ("start", "flex-start"),
+  ("end", "flex-end"),
+  ("center", "center"),
+  ("space-around", "space-around"),
+  ("space-between", "space-between"),
+  ("space-evenly", "space-evenly")
+) !default;
+$fxItemsAlignmentCollection: (
+  ("start", "flex-start"),
+  ("end", "flex-end"),
+  ("center", "center"),
+  ("baseline", "baseline"),
+  ("stretch", "stretch")
+) !default;
+$fxSelfAlignmentCollection: (
+  ("auto", "auto"),
+  ("start", "flex-start"),
+  ("end", "flex-end"),
+  ("center", "center"),
+  ("baseline", "baseline"),
+  ("stretch", "stretch")
+) !default;
+$fxPrefix: "fx" !default;

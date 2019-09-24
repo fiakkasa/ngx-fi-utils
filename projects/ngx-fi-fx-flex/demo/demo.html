@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fx Flex</title>
+    <link async rel="stylesheet" href="./flex.min.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .section {
+        margin-bottom: 32px;
+      }
+
+      .entry {
+        height: 32px;
+        padding: 4px;
+        border-radius: 1px;
+        box-shadow: 0 0 1px #fff;
+      }
+
+      .container > .entry {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        color: #fff;
+      }
+
+      .container.columns > .entry {
+        background-color: teal;
+      }
+
+      .container.offsets > .entry {
+        background-color: tomato;
+      }
+
+      .container.even-odd > .entry {
+        background-color: slategrey;
+      }
+
+      .container.even-odd > .entry:nth-child(2n + 1) {
+        background-color: orchid;
+      }
+
+      .container.align-items > .entry {
+        height: 64px;
+      }
+
+      .container.align-items > .entry > span {
+        display: inline-block;
+        padding: 4px;
+        border: 1px #fff solid;
+      }
+
+      .container.align-self {
+        min-height: 128px;
+        background-color: azure;
+      }
+
+      .container.item.fx-dir-column,
+      .container.grow.fx-dir-column,
+      .container.shrink.fx-dir-column {
+        height: 256px;
+      }
+
+      .container.shrink > .entry {
+        height: 33%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fx Flex</h1>
+
+    <div class="section columns">
+      <h2>Columns</h2>
+      <div class="container columns">
+        <div class="fx-col-1  entry fx-flex fx-align-items-center fx-justify-content-center">1</div>
+        <div class="fx-col-2  entry fx-flex fx-align-items-center fx-justify-content-center">2</div>
+        <div class="fx-col-3  entry fx-flex fx-align-items-center fx-justify-content-center">3</div>
+        <div class="fx-col-4  entry fx-flex fx-align-items-center fx-justify-content-center">4</div>
+        <div class="fx-col-5  entry fx-flex fx-align-items-center fx-justify-content-center">5</div>
+        <div class="fx-col-6  entry fx-flex fx-align-items-center fx-justify-content-center">6</div>
+        <div class="fx-col-7  entry fx-flex fx-align-items-center fx-justify-content-center">7</div>
+        <div class="fx-col-8  entry fx-flex fx-align-items-center fx-justify-content-center">8</div>
+        <div class="fx-col-9  entry fx-flex fx-align-items-center fx-justify-content-center">9</div>
+        <div class="fx-col-10 entry fx-flex fx-align-items-center fx-justify-content-center">10</div>
+        <div class="fx-col-11 entry fx-flex fx-align-items-center fx-justify-content-center">11</div>
+        <div class="fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">12</div>
+      </div>
+    </div>
+
+    <div class="section offsets">
+      <h2>Offsets</h2>
+      <div class="container offsets">
+        <div class="fx-col-1  entry fx-col-offset-11 fx-flex fx-align-items-center fx-justify-content-center">11</div>
+        <div class="fx-col-2  entry fx-col-offset-10 fx-flex fx-align-items-center fx-justify-content-center">10</div>
+        <div class="fx-col-3  entry fx-col-offset-9 fx-flex fx-align-items-center fx-justify-content-center">9</div>
+        <div class="fx-col-4  entry fx-col-offset-8 fx-flex fx-align-items-center fx-justify-content-center">8</div>
+        <div class="fx-col-5  entry fx-col-offset-7 fx-flex fx-align-items-center fx-justify-content-center">7</div>
+        <div class="fx-col-6  entry fx-col-offset-6 fx-flex fx-align-items-center fx-justify-content-center">6</div>
+        <div class="fx-col-7  entry fx-col-offset-5 fx-flex fx-align-items-center fx-justify-content-center">5</div>
+        <div class="fx-col-8  entry fx-col-offset-4 fx-flex fx-align-items-center fx-justify-content-center">4</div>
+        <div class="fx-col-9  entry fx-col-offset-3 fx-flex fx-align-items-center fx-justify-content-center">3</div>
+        <div class="fx-col-10 entry fx-col-offset-2 fx-flex fx-align-items-center fx-justify-content-center">2</div>
+        <div class="fx-col-11 entry fx-col-offset-1 fx-flex fx-align-items-center fx-justify-content-center">1</div>
+        <div class="fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">None</div>
+      </div>
+    </div>
+
+    <div class="section directions">
+      <h2>Directions</h2>
+      <h3>Row</h3>
+      <div class="fx-dir-row            fx-flex container even-odd ">
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h3>Row Reverse</h3>
+      <div class="fx-dir-row-reverse    fx-flex container even-odd">
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h3>Column</h3>
+      <div class="fx-dir-column         fx-flex container even-odd">
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h3>Column Reverse</h3>
+      <div class="fx-dir-column-reverse fx-flex container even-odd ">
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+    </div>
+
+    <div class="section wrap">
+      <h2>Wrap</h2>
+      <h3>Row</h3>
+      <h4>Wrap</h4>
+      <div class="fx-wrap         fx-dir-row fx-flex container even-odd">
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h4>Wrap Reverse</h4>
+      <div class="fx-wrap-reverse fx-flex fx-dir-row container even-odd">
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h4>No Wrap</h4>
+      <div class="fx-nowrap       fx-flex fx-dir-row container even-odd">
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h3>Column</h3>
+      <h4>Wrap</h4>
+      <div class="fx-wrap         fx-flex fx-dir-column container even-odd">
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h4>Wrap Reverse</h4>
+      <div class="fx-wrap-reverse fx-flex fx-dir-column container even-odd">
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h4>No Wrap</h4>
+      <div class="fx-nowrap       fx-flex fx-dir-column container even-odd">
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+    </div>
+
+    <div class="section justify-content">
+      <h2>Justify Content</h2>
+      <div class="container even-odd">
+        <div class="entry fx-flex fx-justify-content-start          fx-align-items-center">
+          <span>Start</span>
+        </div>
+        <div class="entry fx-flex fx-justify-content-end            fx-align-items-center">
+          <span>End</span>
+        </div>
+        <div class="entry fx-flex fx-justify-content-center         fx-align-items-center">
+          <span>Center</span>
+        </div>
+        <div class="entry fx-flex fx-justify-content-space-around   fx-align-items-center">
+          <span>Space</span>
+          <span>Around</span>
+        </div>
+        <div class="entry fx-flex fx-justify-content-space-between  fx-align-items-center">
+          <span>Space</span>
+          <span>Between</span>
+        </div>
+        <div class="entry fx-flex fx-justify-content-space-evenly   fx-align-items-center">
+          <span>Space</span>
+          <span>Evenly</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section align-items">
+      <h2>Align Items</h2>
+      <div class="container even-odd align-items">
+        <div class="fx-align-items-start      entry fx-flex">
+          <span>Start</span>
+        </div>
+        <div class="fx-align-items-end        entry fx-flex">
+          <span>End</span>
+        </div>
+        <div class="fx-align-items-center     entry fx-flex">
+          <span>Center</span>
+        </div>
+        <div class="fx-align-items-baseline   entry fx-flex">
+          <span>Baseline</span>
+        </div>
+        <div class="fx-align-items-stretch    entry fx-flex">
+          <span>Stretch</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section align-self">
+      <h2>Align Self</h2>
+      <h3>Row</h3>
+      <div class="container even-odd align-self fx-flex fx-dir-row">
+        <div class="fx-align-self-auto      entry fx-flex fx-align-items-center">Auto</div>
+        <div class="fx-align-self-start     entry fx-flex fx-align-items-center">Start</div>
+        <div class="fx-align-self-end       entry fx-flex fx-align-items-center">End</div>
+        <div class="fx-align-self-center    entry fx-flex fx-align-items-center">Center</div>
+        <div class="fx-align-self-baseline  entry fx-flex fx-align-items-center">Baseline</div>
+        <div class="fx-align-self-stretch   entry fx-flex fx-align-items-center">Stretch</div>
+      </div>
+
+      <h3>Column</h3>
+      <div class="container even-odd align-self fx-flex fx-dir-column">
+        <div class="fx-align-self-auto      entry fx-flex fx-align-items-center">Auto</div>
+        <div class="fx-align-self-start     entry fx-flex fx-align-items-center">Start</div>
+        <div class="fx-align-self-end       entry fx-flex fx-align-items-center">End</div>
+        <div class="fx-align-self-center    entry fx-flex fx-align-items-center">Center</div>
+        <div class="fx-align-self-baseline  entry fx-flex fx-align-items-center">Baseline</div>
+        <div class="fx-align-self-stretch   entry fx-flex fx-align-items-center">Stretch</div>
+      </div>
+    </div>
+
+    <div class="section item">
+      <h2>Item</h2>
+      <h3>Row</h3>
+      <div class="container even-odd item fx-flex fx-dir-row">
+        <div class="fx-item           entry fx-flex fx-align-items-center fx-justify-content-center">Item</div>
+        <div class="fx-item-no-grow   entry fx-flex fx-align-items-center fx-justify-content-center">No Grow</div>
+        <div class="fx-item-no-shrink entry fx-flex fx-align-items-center fx-justify-content-center">No Shrink</div>
+      </div>
+
+      <h3>Column</h3>
+      <div class="container even-odd item fx-flex fx-dir-column">
+        <div class="fx-item           entry fx-flex fx-align-items-center fx-justify-content-center">Item</div>
+        <div class="fx-item-no-grow   entry fx-flex fx-align-items-center fx-justify-content-center">No Grow</div>
+        <div class="fx-item-no-shrink entry fx-flex fx-align-items-center fx-justify-content-center">No Shrink</div>
+      </div>
+    </div>
+
+    <div class="section grow">
+      <h2>Grow</h2>
+      <h3>Row</h3>
+      <div class="container even-odd grow fx-flex fx-dir-row">
+        <div class="fx-grow-0 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Grow 0</div>
+        <div class="fx-grow-1 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Grow 1</div>
+        <div class="fx-grow-2 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Grow 2</div>
+      </div>
+
+      <h3>Column</h3>
+      <div class="container even-odd grow fx-flex fx-dir-column">
+        <div class="fx-grow-0 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Grow 0</div>
+        <div class="fx-grow-1 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Grow 1</div>
+        <div class="fx-grow-2 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Grow 2</div>
+      </div>
+    </div>
+
+    <div class="section shrink">
+      <h2>Shrink</h2>
+      <h3>Row</h3>
+      <div class="container even-odd shrink fx-flex fx-dir-row">
+        <div class="fx-shrink-0 fx-col-4 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Shrink 0</div>
+        <div class="fx-shrink-1 fx-col-4 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Shrink 1</div>
+        <div class="fx-shrink-2 fx-col-4 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Shrink 2</div>
+        <div class="fx-col-4 entry fx-flex fx-align-items-center fx-justify-content-center">Filler</div>
+      </div>
+
+      <h3>Column</h3>
+      <div class="container even-odd shrink fx-flex fx-dir-column">
+        <div class="fx-shrink-0 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Shrink 0</div>
+        <div class="fx-shrink-1 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Shrink 1</div>
+        <div class="fx-shrink-2 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Shrink 2</div>
+        <div class="entry fx-flex fx-align-items-center fx-justify-content-center">Filler</div>
+      </div>
+    </div>
+
+    <div class="section order">
+      <h2>Order</h2>
+      <h3>Row</h3>
+      <div class="container even-odd fx-flex fx-dir-row">
+        <div class="fx-order-2 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Order 2 - Position 0</div>
+        <div class="fx-order-0 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Order 0 - Position 1</div>
+        <div class="fx-order-1 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Order 1 - Position 2</div>
+      </div>
+
+      <h3>Column</h3>
+      <div class="container even-odd fx-flex fx-dir-column">
+          <div class="fx-order-2 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Order 2 - Position 0</div>
+          <div class="fx-order-0 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Order 0 - Position 1</div>
+          <div class="fx-order-1 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Order 1 - Position 2</div>
+      </div>
+    </div>
+
+    <div class="section responsive">
+      <h2>Responsive Samples</h2>
+      <small>📝 All classes come with a prefixed version that corresponds to a break point</small>
+      <h3>Direction ex. xs and sm column defaults to row</h3>
+      <div class="container even-odd fx-flex fx-dir-row fx-xs-dir-column fx-sm-dir-column">
+        <div class="entry fx-flex fx-item fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-item fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h3>Wrap ex. md, lg, xl, and xxl nowrap defaults to wrap</h3>
+      <div class="container even-odd fx-flex fx-wrap fx-md-nowrap fx-lg-nowrap fx-xl-nowrap fx-xxl-nowrap">
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+        <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+    </div>
+  </body>
+</html>

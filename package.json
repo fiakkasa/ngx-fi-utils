@@ -7,7 +7,7 @@
     "email": "fiakkasa@live.com",
     "url": "https://fiakkas.net"
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -24,12 +24,13 @@
     "test-all": "npm run test-ngx-fi-online",
     "test-ngx-fi-online": "ng test ngx-fi-online --code-coverage --browsers ChromeHeadless --watch false",
     "test-ngx-fi-validator": "ng test ngx-fi-validator --code-coverage --browsers ChromeHeadless --watch false",
-    "generate-all": "npm run generate-ngx-fi-lodash && npm run generate-ngx-fi-moment && npm run generate-ngx-fi-validator && npm run generate-ngx-fi-online && npm run generate-ngx-fi-fuse",
+    "generate-all": "npm run generate-ngx-fi-lodash && npm run generate-ngx-fi-moment && npm run generate-ngx-fi-validator && npm run generate-ngx-fi-online && npm run generate-ngx-fi-fuse && npm run generate-ngx-fi-fx-flex",
     "generate-ngx-fi-lodash": "npm run lint-ngx-fi-lodash && ng build ngx-fi-lodash && cd ./dist/ngx-fi-lodash && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-lodash",
     "generate-ngx-fi-moment": "npm run lint-ngx-fi-moment && ng build ngx-fi-moment && cd ./dist/ngx-fi-moment && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-moment",
     "generate-ngx-fi-validator": "npm run lint-ngx-fi-validator && npm run test-ngx-fi-validator && ng build ngx-fi-validator && cd ./dist/ngx-fi-validator && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-validator",
     "generate-ngx-fi-online": "npm run lint-ngx-fi-online && npm run test-ngx-fi-online && ng build ngx-fi-online && cd ./dist/ngx-fi-online && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-online",
-    "generate-ngx-fi-fuse": "npm run lint-ngx-fi-fuse && ng build ngx-fi-fuse && cd ./dist/ngx-fi-fuse && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-fuse"
+    "generate-ngx-fi-fuse": "npm run lint-ngx-fi-fuse && ng build ngx-fi-fuse && cd ./dist/ngx-fi-fuse && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-fuse",
+    "generate-ngx-fi-fx-flex": "node-sass ./projects/ngx-fi-fx-flex/src/flex.scss ./dist/ngx-fi-fx-flex/flex.min.css --output-style compressed && copyfiles -f ./projects/ngx-fi-fx-flex/package.json ./projects/ngx-fi-fx-flex/README.md ./projects/ngx-fi-fx-flex/demo/demo.html \"./projects/ngx-fi-fx-flex/src/*.scss\" dist/ngx-fi-fx-flex && cd ./dist/ngx-fi-fx-flex && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-fx-flex"
   },
   "private": true,
   "dependencies": {
@@ -60,6 +61,7 @@
     "@types/lodash": "^4.14.139",
     "@types/node": "^12.7.5",
     "codelyzer": "^5.1.1",
+    "copyfiles": "^2.1.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
@@ -68,6 +70,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "ng-packagr": "^5.5.1",
+    "node-sass": "^4.12.0",
     "protractor": "~5.4.2",
     "puppeteer": "^1.20.0",
     "ts-node": "~8.4.1",

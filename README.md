@@ -9,6 +9,7 @@ Various utilities and wrappers for ngx projects
 - [json validator](https://ajv.js.org/) as ngx-fi-validator
 - ngx-fi-online (navigator.onLine wrapper)
 - [fuse](https://fusejs.io/) as ngx-fi-fuse
+- ngx-fi-fx-flex (responsive flex css framework)
 
 ## Lint Commands
 
@@ -23,6 +24,7 @@ Various utilities and wrappers for ngx projects
 
 - all: `npm run test-all`
 - ngx-fi-online: `npm run test-ngx-fi-online`
+- ngx-fi-validator: `npm run test-ngx-fi-validator`
 
 ## Generate Commands
 
@@ -34,6 +36,7 @@ Various utilities and wrappers for ngx projects
 - ngx-fi-validator: `npm run generate-ngx-fi-validator`
 - ngx-fi-online: `npm run generate-ngx-fi-online`
 - ngx-fi-fuse: `npm run generate-ngx-fi-fuse`
+- ngx-fi-fx-flex: `npm run generate-ngx-fi-fx-flex`
 
 ## Credits
 

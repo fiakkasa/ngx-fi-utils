@@ -1,0 +1,107 @@
+@mixin fxStyling($prefixValue) {
+  $dash: "";
+
+  @if $prefixValue != "" {
+    $dash: "-";
+  }
+
+  $prefix: #{$fxPrefix}#{$dash}#{$prefixValue};
+
+  @each $key, $value in $fxDisplayCollection {
+    .#{$prefix}-#{$key} {
+      box-sizing: border-box;
+      display: #{$value};
+    }
+  }
+
+  @each $key, $value in $fxDirectionCollection {
+    .#{$prefix}-dir-#{$key} {
+      flex-direction: #{$value};
+    }
+  }
+
+  @each $key, $value in $fxWrapCollection {
+    .#{$prefix}-#{$key} {
+      flex-wrap: #{$value};
+    }
+  }
+
+  @each $key, $value in $fxJustifyContentCollection {
+    .#{$prefix}-justify-content-#{$key} {
+      justify-content: #{$value};
+    }
+  }
+
+  @each $key, $value in $fxItemsAlignmentCollection {
+    .#{$prefix}-align-items-#{$key} {
+      align-items: #{$value};
+    }
+  }
+
+  @each $key, $value in $fxSelfAlignmentCollection {
+    .#{$prefix}-align-self-#{$key} {
+      align-self: #{$value};
+    }
+  }
+
+  .#{$prefix}-item {
+    flex: 1 1 auto;
+  }
+
+  .#{$prefix}-item-no-grow {
+    flex: 0 1 auto;
+  }
+
+  .#{$prefix}-item-no-shrink {
+    flex: 1 0 auto;
+  }
+
+  @for $i from 0 through $fxGrowAndShrink {
+    .#{$prefix}-grow-#{$i} {
+      flex-grow: #{$i};
+    }
+    .#{$prefix}-shrink-#{$i} {
+      flex-shrink: #{$i};
+    }
+  }
+
+  @for $i from 1 through $fxNumberOfColumns {
+    .#{$prefix}-col-#{$i} {
+      width: percentage($i/$fxNumberOfColumns);
+    }
+    .#{$prefix}-order-#{$i} {
+      order: $i;
+    }
+  }
+
+  $numberOfOffsets: $fxNumberOfColumns - 1;
+
+  @for $i from 1 through $numberOfOffsets {
+    .#{$prefix}-col-offset-#{$i} {
+      $size: percentage((1 / $fxNumberOfColumns) * $i);
+      margin-left: $size;
+    }
+  }
+}
+
+@mixin fxBreakpoints {
+  @each $key, $value in $fxBreakpoints {
+    $maxWidth: map-get($value, "max");
+
+    @if $maxWidth == "" {
+      @media screen and (min-width: map-get($value, "min")) {
+        @include fxStyling($key);
+      }
+    } @else {
+      @media screen and (min-width: map-get($value, "min")) and (max-width: map-get($value, "max")) {
+        @include fxStyling($key);
+      }
+    }
+  }
+}
+
+@mixin flex {
+  @include fxStyling("");
+
+  @include fxBreakpoints;
+}
