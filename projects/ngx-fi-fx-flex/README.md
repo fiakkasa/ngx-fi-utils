@@ -156,3 +156,7 @@ $fxSelfAlignmentCollection: (
 ) !default;
 $fxPrefix: "fx" !default;
 ```
+
+### Classes
+
+Please check `flex.css` for the complete listing of all available classes

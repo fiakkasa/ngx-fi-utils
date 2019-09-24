@@ -1,6 +1,6 @@
 $fxNumberOfColumns: 12 !default;
 $fxGrowAndShrink: 12 !default;
-$fxDisplayCollection: (("flex", "flex"), ("inline-flex", "inline-flex")) !default;
+$fxDisplayCollection: (("flex", "flex"), ("inline-flex", "inline-flex"), ("hide", "none")) !default;
 $fxDirectionCollection: (
   ("row", "row"),
   ("row-reverse", "row-reverse"),

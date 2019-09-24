@@ -7,7 +7,7 @@
     "email": "fiakkasa@live.com",
     "url": "https://fiakkas.net"
   },
-  "version": "0.4.0",
+  "version": "0.5.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -30,7 +30,7 @@
     "generate-ngx-fi-validator": "npm run lint-ngx-fi-validator && npm run test-ngx-fi-validator && ng build ngx-fi-validator && cd ./dist/ngx-fi-validator && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-validator",
     "generate-ngx-fi-online": "npm run lint-ngx-fi-online && npm run test-ngx-fi-online && ng build ngx-fi-online && cd ./dist/ngx-fi-online && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-online",
     "generate-ngx-fi-fuse": "npm run lint-ngx-fi-fuse && ng build ngx-fi-fuse && cd ./dist/ngx-fi-fuse && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-fuse",
-    "generate-ngx-fi-fx-flex": "node-sass ./projects/ngx-fi-fx-flex/src/flex.scss ./dist/ngx-fi-fx-flex/flex.min.css --output-style compressed && copyfiles -f ./projects/ngx-fi-fx-flex/package.json ./projects/ngx-fi-fx-flex/README.md ./projects/ngx-fi-fx-flex/demo/demo.html \"./projects/ngx-fi-fx-flex/src/*.scss\" dist/ngx-fi-fx-flex && cd ./dist/ngx-fi-fx-flex && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-fx-flex"
+    "generate-ngx-fi-fx-flex": "node-sass ./projects/ngx-fi-fx-flex/src/flex.scss ./dist/ngx-fi-fx-flex/flex.css --output-style expanded && node-sass ./projects/ngx-fi-fx-flex/src/flex.scss ./dist/ngx-fi-fx-flex/flex.min.css --output-style compressed && copyfiles -f ./projects/ngx-fi-fx-flex/package.json ./projects/ngx-fi-fx-flex/README.md ./projects/ngx-fi-fx-flex/demo/demo.html \"./projects/ngx-fi-fx-flex/src/*.scss\" dist/ngx-fi-fx-flex && cd ./dist/ngx-fi-fx-flex && npm pack && move ngx-fi-*.tgz ../../packages/ngx-fi-fx-flex"
   },
   "private": true,
   "dependencies": {

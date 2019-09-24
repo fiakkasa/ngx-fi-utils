@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fx Flex</title>
-    <link async rel="stylesheet" href="./flex.min.css" />
+    <link async rel="stylesheet" href="./flex.css" />
     <style>
       body {
         font-family: sans-serif;
@@ -74,7 +74,7 @@
     <h1>Fx Flex</h1>
 
     <div class="section columns">
-      <h2>Columns</h2>
+      <h2>Columns 1 - 12</h2>
       <div class="container columns">
         <div class="fx-col-1  entry fx-flex fx-align-items-center fx-justify-content-center">1</div>
         <div class="fx-col-2  entry fx-flex fx-align-items-center fx-justify-content-center">2</div>
@@ -92,7 +92,7 @@
     </div>
 
     <div class="section offsets">
-      <h2>Offsets</h2>
+      <h2>Offsets 1 - 11</h2>
       <div class="container offsets">
         <div class="fx-col-1  entry fx-col-offset-11 fx-flex fx-align-items-center fx-justify-content-center">11</div>
         <div class="fx-col-2  entry fx-col-offset-10 fx-flex fx-align-items-center fx-justify-content-center">10</div>
@@ -266,7 +266,7 @@
     </div>
 
     <div class="section grow">
-      <h2>Grow</h2>
+      <h2>Grow 0 - 12</h2>
       <h3>Row</h3>
       <div class="container even-odd grow fx-flex fx-dir-row">
         <div class="fx-grow-0 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Grow 0</div>
@@ -283,7 +283,7 @@
     </div>
 
     <div class="section shrink">
-      <h2>Shrink</h2>
+      <h2>Shrink 0 - 12</h2>
       <h3>Row</h3>
       <div class="container even-odd shrink fx-flex fx-dir-row">
         <div class="fx-shrink-0 fx-col-4 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Shrink 0</div>
@@ -302,7 +302,7 @@
     </div>
 
     <div class="section order">
-      <h2>Order</h2>
+      <h2>Order 0 - 12</h2>
       <h3>Row</h3>
       <div class="container even-odd fx-flex fx-dir-row">
         <div class="fx-order-2 fx-item entry fx-flex fx-align-items-center fx-justify-content-center">Order 2 - Position 0</div>
@@ -321,16 +321,36 @@
     <div class="section responsive">
       <h2>Responsive Samples</h2>
       <small>📝 All classes come with a prefixed version that corresponds to a break point</small>
-      <h3>Direction ex. xs and sm column defaults to row</h3>
+      <h3>Direction ex. xs and sm column - defaults to row</h3>
       <div class="container even-odd fx-flex fx-dir-row fx-xs-dir-column fx-sm-dir-column">
         <div class="entry fx-flex fx-item fx-align-items-center fx-justify-content-center">Sample</div>
         <div class="entry fx-flex fx-item fx-align-items-center fx-justify-content-center">Sample</div>
       </div>
 
-      <h3>Wrap ex. md, lg, xl, and xxl nowrap defaults to wrap</h3>
+      <h3>Wrap ex. md, lg, xl, and xxl nowrap - defaults to wrap</h3>
       <div class="container even-odd fx-flex fx-wrap fx-md-nowrap fx-lg-nowrap fx-xl-nowrap fx-xxl-nowrap">
         <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
         <div class="entry fx-flex fx-col-8 fx-align-items-center fx-justify-content-center">Sample</div>
+      </div>
+
+      <h3>Columns ex. 6 columns</h3>
+      <div class="container even-odd fx-layout-row fx-wrap">
+        <div class="fx-col-2 fx-xs-col-12 fx-sm-col-6 fx-md-col-4 fx-lg-col-3 fx-xl-col-2 entry fx-flex fx-align-items-center fx-justify-content-center">1</div>
+        <div class="fx-col-2 fx-xs-col-12 fx-sm-col-6 fx-md-col-4 fx-lg-col-3 fx-xl-col-2 entry fx-flex fx-align-items-center fx-justify-content-center">2</div>
+        <div class="fx-col-2 fx-xs-col-12 fx-sm-col-6 fx-md-col-4 fx-lg-col-3 fx-xl-col-2 entry fx-flex fx-align-items-center fx-justify-content-center">3</div>
+        <div class="fx-col-2 fx-xs-col-12 fx-sm-col-6 fx-md-col-4 fx-lg-col-3 fx-xl-col-2 entry fx-flex fx-align-items-center fx-justify-content-center">4</div>
+        <div class="fx-col-2 fx-xs-col-12 fx-sm-col-6 fx-md-col-4 fx-lg-col-6 fx-xl-col-2 entry fx-flex fx-align-items-center fx-justify-content-center">5</div>
+        <div class="fx-col-2 fx-xs-col-12 fx-sm-col-6 fx-md-col-4 fx-lg-col-6 fx-xl-col-2 entry fx-flex fx-align-items-center fx-justify-content-center">6</div>
+      </div>
+
+      <h3>Hide odd entries on xs, hide even entries on sm, and show all when greater than sm</h3>
+      <div class="container even-odd">
+        <div class="fx-xs-hide fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">1</div>
+        <div class="fx-sm-hide fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">2</div>
+        <div class="fx-xs-hide fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">3</div>
+        <div class="fx-sm-hide fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">4</div>
+        <div class="fx-xs-hide fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">5</div>
+        <div class="fx-sm-hide fx-col-12 entry fx-flex fx-align-items-center fx-justify-content-center">6</div>
       </div>
     </div>
   </body>

@@ -7,9 +7,20 @@
 
   $prefix: #{$fxPrefix}#{$dash}#{$prefixValue};
 
+  // shorthand for .fx-flex.fx-dir-*
+  @each $key, $value in $fxDirectionCollection {
+    .#{$prefix}-layout-#{$key} {
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: #{$value};
+    }
+  }
+
   @each $key, $value in $fxDisplayCollection {
     .#{$prefix}-#{$key} {
-      box-sizing: border-box;
+      @if $value != "none" {
+        box-sizing: border-box;
+      }
       display: #{$value};
     }
   }
