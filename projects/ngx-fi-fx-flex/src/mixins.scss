@@ -95,6 +95,13 @@
     }
   }
 
+  // Basis
+  @each $key, $value in $fxBasis {
+    .#{$prefix}-basis-#{$key} {
+      flex-basis: #{$value};
+    }
+  }
+
   // Columns
   @for $i from 1 through $fxNumberOfColumns {
     .#{$prefix}-col-#{$i} {

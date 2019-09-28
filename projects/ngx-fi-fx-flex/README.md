@@ -124,6 +124,7 @@ $fxBreakpoints: (
 ```scss
 $fxNumberOfColumns: 12 !default;
 $fxGrowAndShrink: 12 !default;
+$fxBasis: (("auto", "auto"), ("0", "0")) !default;
 $fxDisplayCollection: (("flex", "flex"), ("inline-flex", "inline-flex")) !default;
 $fxDirectionCollection: (
   ("row", "row"),
