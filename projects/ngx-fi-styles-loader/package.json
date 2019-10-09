@@ -1,0 +1,24 @@
+{
+  "name": "ngx-fi-styles-loader",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A streamlined approach to load styles dynamically",
+  "keywords": [
+    "css loader",
+    "angular"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiakkasa/ngx-fi-utils.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "@types/lodash": "^4.14.138",
+    "lodash": "^4.17.15",
+    "ngx-fi-lodash": "^1.0.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^1.20.0"
+  }
+}

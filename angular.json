@@ -57,13 +57,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-fi-moment/tsconfig.lib.json",
-              "projects/ngx-fi-moment/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ngx-fi-moment/tsconfig.lib.json", "projects/ngx-fi-moment/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -92,13 +87,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-fi-validator/tsconfig.lib.json",
-              "projects/ngx-fi-validator/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ngx-fi-validator/tsconfig.lib.json", "projects/ngx-fi-validator/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -127,13 +117,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-fi-online/tsconfig.lib.json",
-              "projects/ngx-fi-online/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ngx-fi-online/tsconfig.lib.json", "projects/ngx-fi-online/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -162,13 +147,39 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-fi-fuse/tsconfig.lib.json",
-              "projects/ngx-fi-fuse/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ngx-fi-fuse/tsconfig.lib.json", "projects/ngx-fi-fuse/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "ngx-fi-styles-loader": {
+      "projectType": "library",
+      "root": "projects/ngx-fi-styles-loader",
+      "sourceRoot": "projects/ngx-fi-styles-loader/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-fi-styles-loader/tsconfig.lib.json",
+            "project": "projects/ngx-fi-styles-loader/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-fi-styles-loader/src/test.ts",
+            "tsConfig": "projects/ngx-fi-styles-loader/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-fi-styles-loader/karma.conf.js",
+            "codeCoverageExclude": ["**/*.testing-module.ts"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/ngx-fi-styles-loader/tsconfig.lib.json", "projects/ngx-fi-styles-loader/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

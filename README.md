@@ -10,6 +10,7 @@ Various utilities and wrappers for ngx projects
 - ngx-fi-online (navigator.onLine wrapper)
 - [fuse](https://fusejs.io/) as ngx-fi-fuse
 - ngx-fi-fx-flex (responsive flex css framework)
+- ngx-fi-styles-loader (a streamlined approach to load styles dynamically)
 
 ## Lint Commands
 
@@ -19,12 +20,14 @@ Various utilities and wrappers for ngx projects
 - ngx-fi-validator: `npm run lint-ngx-fi-validator`
 - ngx-fi-online: `npm run lint-ngx-fi-online`
 - ngx-fi-fuse: `npm run lint-ngx-fi-fuse`
+- ngx-fi-styles-loader: `npm run lint-ngx-fi-styles-loader`
 
 ## Test Commands
 
 - all: `npm run test-all`
 - ngx-fi-online: `npm run test-ngx-fi-online`
 - ngx-fi-validator: `npm run test-ngx-fi-validator`
+- ngx-fi-validator: `npm run test-ngx-fi-styles-loader`
 
 ## Generate Commands
 
@@ -37,6 +40,7 @@ Various utilities and wrappers for ngx projects
 - ngx-fi-online: `npm run generate-ngx-fi-online`
 - ngx-fi-fuse: `npm run generate-ngx-fi-fuse`
 - ngx-fi-fx-flex: `npm run generate-ngx-fi-fx-flex`
+- ngx-fi-fuse: `npm run generate-ngx-fi-styles-loader`
 
 ## Credits
 
