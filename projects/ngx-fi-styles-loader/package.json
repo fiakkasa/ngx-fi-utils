@@ -1,6 +1,6 @@
 {
   "name": "ngx-fi-styles-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "A streamlined approach to load styles dynamically",
   "keywords": [
@@ -14,11 +14,11 @@
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0",
-    "@types/lodash": "^4.14.138",
+    "@types/lodash": "^4.14.146",
     "lodash": "^4.17.15",
-    "ngx-fi-lodash": "^1.0.0"
+    "ngx-fi-lodash": "^1.1.0"
   },
   "devDependencies": {
-    "puppeteer": "^1.20.0"
+    "puppeteer": "^2.0.0"
   }
 }
