@@ -1,7 +1,7 @@
 import { InjectionToken } from '@angular/core';
 
 export function is(): boolean {
-  return navigator && navigator.onLine;
+  return (window as any).navigator && (window as any).navigator.onLine;
 }
 
 const onlineInstance = { is };

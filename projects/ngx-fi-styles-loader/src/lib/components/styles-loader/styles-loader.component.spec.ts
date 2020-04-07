@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgxFiLodashModule } from 'ngx-fi-lodash';
 import { of } from 'rxjs';
 import { StyleHandlingMode } from '../../enums/style-handling-mode.enum';
 import { SafeUrlPipe } from '../../pipes/safe-url/safe-url.pipe';
@@ -16,7 +15,6 @@ describe('StylesLoaderComponent', () => {
         StylesLoaderComponent, //
         SafeUrlPipe
       ],
-      imports: [NgxFiLodashModule],
       providers: [
         {
           provide: StylesLoaderService,

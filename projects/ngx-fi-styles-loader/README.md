@@ -68,7 +68,7 @@ describe('TestingTitle', () => {
 
     ```typescript
     export interface IStylesLoaderService {
-      loadingStyles$: Observable<Dictionary<string>>;
+      loadingStyles$: Observable<{ [key: string]: string }>;
 
       isStyleLoading(url: string): boolean;
 

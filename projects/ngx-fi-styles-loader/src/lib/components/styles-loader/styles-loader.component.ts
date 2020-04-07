@@ -1,12 +1,10 @@
 // tslint:disable:component-selector
-import { ChangeDetectionStrategy, Component, Inject, Input, ViewEncapsulation } from '@angular/core';
-import { Dictionary, LoDashStatic } from 'lodash';
-import { LODASH_TOKEN } from 'ngx-fi-lodash';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { assign, get, isString, pick, reduce } from 'lodash-es';
 import { IStylesLoaderComponent } from '../../interfaces/istyles-loader-component.interface';
 import { StyleItem } from '../../interfaces/style-item.interface';
 import { StylesLoaderConfig } from '../../interfaces/styles-loader-config.interface';
 import { StylesLoaderService } from '../../services/styles-loader.service';
-
 @Component({
   selector: 'styles-loader',
   template: `
@@ -23,6 +21,7 @@ import { StylesLoaderService } from '../../services/styles-loader.service';
 })
 export class StylesLoaderComponent implements IStylesLoaderComponent {
   private items: StyleItem[] = [];
+  readonly _ = { assign, reduce, isString, pick, get };
 
   get Items(): StyleItem[] {
     return this.items;
@@ -35,10 +34,10 @@ export class StylesLoaderComponent implements IStylesLoaderComponent {
     this.items = Object.values(
       this._.reduce(
         collection,
-        (items: Dictionary<StyleItem>, url: string) =>
+        (items: { [key: string]: StyleItem }, url: string) =>
           (!!url &&
             this._.isString(url) &&
-            Object.assign(items, {
+            this._.assign(items, {
               [url]: {
                 key: url,
                 url,
@@ -51,10 +50,7 @@ export class StylesLoaderComponent implements IStylesLoaderComponent {
     );
   }
 
-  constructor(
-    @Inject(LODASH_TOKEN) private _: LoDashStatic, //
-    private loaderService: StylesLoaderService
-  ) {}
+  constructor(private loaderService: StylesLoaderService) {}
 
   trackByKey = (index: number, { key = `${index}` }: { key?: string }): string => key;
 }

@@ -1,6 +1,6 @@
 {
   "name": "ngx-fi-validator",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "license": "MIT",
   "description": "json schema validator for ngx projects",
   "keywords": [
@@ -14,9 +14,9 @@
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0",
-    "ajv": "^6.10.2"
+    "ajv": "^6.12.0"
   },
   "devDependencies": {
-    "puppeteer": "^2.0.0"
+    "puppeteer": "^2.1.1"
   }
 }

@@ -13,6 +13,6 @@ describe('OnlineProvider', () => {
   }));
 
   it('should match navigator.onLine', inject([ONLINE_TOKEN], (online: OnlineDefinition) => {
-    expect(online.is()).toBe(navigator.onLine);
+    expect(online.is()).toBe((window as any).navigator.onLine);
   }));
 });

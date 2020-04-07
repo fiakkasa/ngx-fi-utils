@@ -4,7 +4,7 @@ import { LoDashStatic } from 'lodash';
 
 export const LODASH_TOKEN = new InjectionToken<LoDashStatic>('_');
 
-export function factory() {
+export function factory(): typeof _ {
   return _;
 }
 

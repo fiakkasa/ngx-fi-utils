@@ -29,6 +29,17 @@ Various utilities and wrappers for ngx projects
 - ngx-fi-validator: `npm run test-ngx-fi-validator`
 - ngx-fi-validator: `npm run test-ngx-fi-styles-loader`
 
+## Build Commands
+
+- all: `npm run build-all`
+- ngx-fi-lodash: `npm run build-ngx-fi-lodash`
+- ngx-fi-moment: `npm run build-ngx-fi-moment`
+- ngx-fi-validator: `npm run build-ngx-fi-validator`
+- ngx-fi-online: `npm run build-ngx-fi-online`
+- ngx-fi-fuse: `npm run build-ngx-fi-fuse`
+- ngx-fi-fx-flex: `npm run build-ngx-fi-fx-flex`
+- ngx-fi-styles-loader: `npm run build-ngx-fi-styles-loader`
+
 ## Generate Commands
 
 **Target: Windows 10 with powershell**

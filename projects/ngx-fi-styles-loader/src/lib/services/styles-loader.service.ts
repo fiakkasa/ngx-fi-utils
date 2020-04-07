@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable } from '@angular/core';
-import { Dictionary, LoDashStatic } from 'lodash';
-import { LODASH_TOKEN } from 'ngx-fi-lodash';
+import { Injectable } from '@angular/core';
+import { assign, get, isString, omit, pick, size } from 'lodash-es';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, distinctUntilChanged, finalize, map } from 'rxjs/operators';
 import { StyleHandlingMode } from '../enums/style-handling-mode.enum';
@@ -11,10 +10,11 @@ import { IStylesLoaderService } from '../interfaces/istyles-loader-service.inter
   providedIn: 'root'
 })
 export class StylesLoaderService implements IStylesLoaderService {
-  private readonly loadingStylesSubscription = new BehaviorSubject<Dictionary<string>>({});
+  private readonly loadingStylesSubscription = new BehaviorSubject<{ [key: string]: string }>({});
   readonly loadingStyles$ = this.loadingStylesSubscription.asObservable();
+  readonly _ = { assign, get, isString, omit, pick, size };
 
-  constructor(@Inject(LODASH_TOKEN) private _: LoDashStatic, private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   isStyleLoading = (url: string): boolean => !!this._.get(this.loadingStylesSubscription.getValue(), url);
 

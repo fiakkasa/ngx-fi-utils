@@ -1,6 +1,5 @@
 // tslint:disable:component-selector
 import { Component, Input, NgModule } from '@angular/core';
-import { Dictionary } from 'lodash';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { StyleHandlingMode } from './enums/style-handling-mode.enum';
 import { IStylesLoaderComponent } from './interfaces/istyles-loader-component.interface';
@@ -29,7 +28,7 @@ export class StylesLoaderRawMockComponent implements IStylesLoaderRawComponent {
 }
 
 export class StylesLoaderMockService implements IStylesLoaderService {
-  loadingStyles$: Observable<Dictionary<string>> = new BehaviorSubject({});
+  loadingStyles$: Observable<{ [key: string]: string }> = new BehaviorSubject({});
 
   isStyleLoading = (url: string): boolean => false;
 

@@ -4,7 +4,7 @@
   "lib": {
     "entryFile": "src/public-api.ts",
     "umdModuleIds": {
-      "ngx-fi-lodash": "ngxFiLodash"
+      "lodash-es": "lodashEs"
     }
   }
 }

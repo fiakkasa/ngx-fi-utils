@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { NgxFiLodashModule } from 'ngx-fi-lodash';
 import { StylesLoaderRawComponent } from './components/styles-loader-raw/styles-loader-raw.component';
 import { StylesLoaderComponent } from './components/styles-loader/styles-loader.component';
 import { SafeUrlPipe } from './pipes/safe-url/safe-url.pipe';
@@ -13,7 +12,7 @@ const components = [StylesLoaderComponent, StylesLoaderRawComponent];
   declarations: [...components, SafeUrlPipe],
   entryComponents: components,
   exports: components,
-  imports: [CommonModule, HttpClientModule, NgxFiLodashModule],
+  imports: [CommonModule, HttpClientModule],
   providers: [StylesLoaderService]
 })
 export class NgxFiStylesLoaderModule {}

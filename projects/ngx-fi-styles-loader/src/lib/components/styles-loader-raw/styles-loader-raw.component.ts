@@ -1,7 +1,6 @@
 // tslint:disable:component-selector
-import { ChangeDetectionStrategy, Component, Inject, Input, ViewEncapsulation } from '@angular/core';
-import { Dictionary, LoDashStatic } from 'lodash';
-import { LODASH_TOKEN } from 'ngx-fi-lodash';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { assign, isString, reduce } from 'lodash-es';
 import { IStylesLoaderRawComponent } from '../../interfaces/istyles-loader-raw-component.interface';
 
 @Component({
@@ -20,6 +19,7 @@ import { IStylesLoaderRawComponent } from '../../interfaces/istyles-loader-raw-c
 })
 export class StylesLoaderRawComponent implements IStylesLoaderRawComponent {
   private items: string[] = [];
+  readonly _ = { assign, isString, reduce };
 
   get Items(): string[] {
     return this.items;
@@ -30,13 +30,11 @@ export class StylesLoaderRawComponent implements IStylesLoaderRawComponent {
     this.items = Object.values(
       this._.reduce(
         value,
-        (items: Dictionary<string>, url: string) => (!!url && this._.isString(url) && Object.assign(items, { [url]: url })) || items,
+        (items: { [key: string]: string }, url: string) => (!!url && this._.isString(url) && this._.assign(items, { [url]: url })) || items,
         {}
       )
     );
   }
-
-  constructor(@Inject(LODASH_TOKEN) private _: LoDashStatic) {}
 
   trackByValue = (index: number, value: string): string => value;
 }

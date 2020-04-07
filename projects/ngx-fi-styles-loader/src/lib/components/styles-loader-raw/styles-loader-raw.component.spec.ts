@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgxFiLodashModule } from 'ngx-fi-lodash';
 import { SafeUrlPipe } from '../../pipes/safe-url/safe-url.pipe';
 import { StylesLoaderRawComponent } from './styles-loader-raw.component';
 
@@ -13,7 +12,6 @@ describe('StylesLoaderRawComponent', () => {
         StylesLoaderRawComponent, //
         SafeUrlPipe
       ],
-      imports: [NgxFiLodashModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(StylesLoaderRawComponent);

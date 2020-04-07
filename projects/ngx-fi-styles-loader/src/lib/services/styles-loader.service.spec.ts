@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { discardPeriodicTasks, fakeAsync, flushMicrotasks, TestBed, tick } from '@angular/core/testing';
-import { NgxFiLodashModule } from 'ngx-fi-lodash';
 import { of, throwError } from 'rxjs';
 import { skip } from 'rxjs/operators';
 import { StyleHandlingMode } from '../enums/style-handling-mode.enum';
@@ -19,7 +18,6 @@ describe('StylesLoaderService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        NgxFiLodashModule, //
         HttpClientTestingModule
       ]
     });

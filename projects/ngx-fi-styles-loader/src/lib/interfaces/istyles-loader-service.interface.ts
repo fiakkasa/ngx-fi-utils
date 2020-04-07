@@ -1,9 +1,8 @@
-import { Dictionary } from 'lodash';
 import { Observable } from 'rxjs';
 import { StyleHandlingMode } from '../enums/style-handling-mode.enum';
 
 export interface IStylesLoaderService {
-  loadingStyles$: Observable<Dictionary<string>>;
+  loadingStyles$: Observable<{ [key: string]: string }>;
 
   isStyleLoading(url: string): boolean;
 
